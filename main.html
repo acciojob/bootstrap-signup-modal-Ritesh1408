@@ -9,92 +9,103 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <title>Bootstrap Modal Example</title>
+    <title>Signup Modal</title>
   </head>
   <body>
     <!-- Button to Trigger Modal -->
-    <button
-      type="button"
-      class="btn btn-danger mt-4"
-      data-bs-toggle="modal"
-      data-bs-target="#staticBackdrop"
-    >
-      Sign Up
-    </button>
+    <div class="container text-center mt-5">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#signupModal"
+      >
+        Sign Up
+      </button>
+    </div>
 
-    <!-- Modal -->
+    <!-- Signup Modal -->
     <div
       class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
+      id="signupModal"
       tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
+      aria-labelledby="signupModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
+          <!-- Modal Header -->
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            <h1 class="modal-title fs-5" id="signupModalLabel">
               Create Account
             </h1>
             <button
               type="button"
-              class="btn-close close"
+              class="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
+
+          <!-- Modal Body -->
           <div class="modal-body">
             <form>
+              <!-- Email Input -->
               <div class="mb-3">
-                <label for="inputEmail" class="form-label">Email address</label>
+                <label for="emailInput" class="form-label">Email address</label>
                 <input
                   type="email"
-                  placeholder="Enter email"
                   class="form-control"
-                  id="inputEmail"
+                  id="emailInput"
+                  placeholder="Enter email"
                 />
-                <div id="emailHelpBlock" class="form-text">
+                <div id="emailHelp" class="form-text">
                   Your information is safe with us.
                 </div>
               </div>
+
+              <!-- Password Input -->
               <div class="mb-3">
-                <label for="inputPassword" class="form-label">Password</label>
+                <label for="passwordInput" class="form-label">Password</label>
                 <input
                   type="password"
                   class="form-control"
-                  id="inputPassword"
+                  id="passwordInput"
                   placeholder="Password"
                 />
               </div>
+
+              <!-- Confirm Password Input -->
               <div class="mb-3">
-                <label for="confirmPassword" class="form-label">
+                <label for="confirmPasswordInput" class="form-label">
                   Confirm Password
                 </label>
                 <input
                   type="password"
                   class="form-control"
-                  id="confirmPassword"
+                  id="confirmPasswordInput"
                   placeholder="Confirm Password"
                 />
               </div>
             </form>
           </div>
+
+          <!-- Modal Footer -->
           <div class="modal-footer">
-            <!-- <button
+            <button
               type="button"
               class="btn btn-secondary"
               data-bs-dismiss="modal"
             >
               Close
-            </button> -->
+            </button>
             <button type="button" class="btn btn-success">Submit</button>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
